@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-worker
+  labels:
+    name: app-worker
+    app: demo-app-worker
+spec:
+  containers:
+  - name: app-worker
+    image: dockersamples/examplevotingapp_worker
+
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    
